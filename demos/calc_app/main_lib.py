@@ -131,30 +131,6 @@ class Calculator():
     def __init__(self) -> None:
         pass
 
-    def config_logging(self) -> None:
-        try:
-            lc_config_file_path = Path("config.json")
-
-            with lc_config_file_path.open("r", encoding="UTF-8") as lo_config_file:
-                la_config_data = json.load(lo_config_file)
-
-            if la_config_data["level"] == "INFO":
-                lo_level = logging.INFO
-            elif la_config_data["level"] == "DEBUG":
-                lo_level = logging.DEBUG
-            else:
-                lo_level = logging.ERROR
-
-            logging.basicConfig(
-                filename=la_config_data["filename"],
-                level=lo_level,
-                format="%(levelname)s: %(message)s",
-            )
-
-        except IOError as exc:
-            print(f"Error: {exc}")
-
-
     def run(self, po_transaction: MathTransaction) -> None:
         for ln_loop in range(0, 999):
             print(" ")

@@ -1,0 +1,1 @@
+{"1": {"command": "add", "delta_value": 10.0}, "2": {"command": "multiply", "delta_value": 2.0}, "3": {"command": "add", "delta_value": 10.0}, "4": {"command": "multiply", "delta_value": 2.0}, "5": {"command": "add", "delta_value": 40.0}}

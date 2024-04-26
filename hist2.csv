@@ -1,0 +1,6 @@
+id,command,delta_value
+1,add,10.0
+2,multiply,2.0
+3,add,10.0
+4,multiply,2.0
+5,add,40.0

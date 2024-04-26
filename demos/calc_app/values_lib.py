@@ -1,3 +1,4 @@
+import logging
 from typing import Callable
 
 
@@ -15,10 +16,12 @@ def get_delta(pc_command: str) -> float | None:
     try:
         ln_delta = float(lc_delta)
         if pc_command == "divide" and ln_delta == 0:
-            print("Cannot divide by 0!")
+            logging.error("Cannot divide by 0!")
+            #print("Cannot divide by 0!")
             ln_delta = None
     except:
-        print("Invalid delta value provided!")
+        logging.error("Invalid delta value provided!")
+        #print("Invalid delta value provided!")
         ln_delta = None
 
     return ln_delta
